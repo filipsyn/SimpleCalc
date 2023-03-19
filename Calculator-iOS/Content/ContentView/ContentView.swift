@@ -14,18 +14,6 @@ struct ContentView: View {
     
     var color: Color = .blue
     
-    //MARK: - Functions
-    
-    //MARK: Handling of operator button press
-    func handleOperation(operation: Operators){
-        if (viewModel.temporaryNumber != 0) {
-            viewModel.result = viewModel.temporaryNumber
-        }
-        
-        viewModel.expression = ""
-        viewModel.temporaryNumber = 0
-        viewModel.selectedOperator = operation
-    }
     
     //MARK: Handling of pressing = button
     func handleEquals(){
@@ -52,7 +40,6 @@ struct ContentView: View {
     
     
     //MARK: - Layout
-    
     var body: some View {
         VStack(alignment: .center, spacing: 25) {
             Image(systemName: "c.circle")
@@ -70,11 +57,11 @@ struct ContentView: View {
             VStack(spacing: 8) {
                 HStack(spacing: 10) {
                     OperatorButtonView(icon: "plus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .addition, color: color){
-                        handleOperation(operation: .addition)
+                        viewModel.handleOperation(operation: .addition)
                     }
                     
                     OperatorButtonView(icon: "minus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .subtraction, color: color){
-                        handleOperation(operation: .subtraction)
+                        viewModel.handleOperation(operation: .subtraction)
                     }
                     
                     ClearButtonView(color: color){
@@ -84,11 +71,11 @@ struct ContentView: View {
                 
                 HStack {
                     OperatorButtonView(icon: "multiply", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){
-                        handleOperation(operation: .multiply)
+                        viewModel.handleOperation(operation: .multiply)
                     }
                     
                     OperatorButtonView(icon: "divide", selectedOperator: $viewModel.selectedOperator, buttonOperator: .division, color: color){
-                        handleOperation(operation: .division)
+                        viewModel.handleOperation(operation: .division)
                     }
                     
                     OperatorButtonView(icon: "equal", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){

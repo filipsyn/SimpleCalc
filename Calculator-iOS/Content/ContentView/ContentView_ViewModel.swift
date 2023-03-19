@@ -15,6 +15,7 @@ extension ContentView {
         @Published var result: Int = 0
         @Published var selectedOperator: Operators = .addition
         
+        
         //MARK: Handling of clearing operation
         func handleClear(){
             self.expression = ""
@@ -28,6 +29,18 @@ extension ContentView {
         func handleNumberPress(number: Int){
             self.expression += String(number)
             self.temporaryNumber = Int(self.expression) ?? 0
+        }
+        
+        
+        //MARK: Handling of operator button press
+        func handleOperation(operation: Operators){
+            if (self.temporaryNumber != 0) {
+                self.result = self.temporaryNumber
+            }
+            
+            self.expression = ""
+            self.temporaryNumber = 0
+            self.selectedOperator = operation
         }
     }
 }
