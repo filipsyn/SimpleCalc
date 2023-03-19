@@ -11,6 +11,8 @@
 		A98F34EE29C751B100C0DD80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F34ED29C751B100C0DD80 /* ContentView.swift */; };
 		A98F34F029C751B200C0DD80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98F34EF29C751B200C0DD80 /* Assets.xcassets */; };
 		A98F34F329C751B200C0DD80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98F34F229C751B200C0DD80 /* Preview Assets.xcassets */; };
+		A98F34FC29C7531E00C0DD80 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F34FB29C7531E00C0DD80 /* Operators.swift */; };
+		A98F34FE29C7537D00C0DD80 /* ContentView_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F34FD29C7537D00C0DD80 /* ContentView_ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		A98F34ED29C751B100C0DD80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A98F34EF29C751B200C0DD80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A98F34F229C751B200C0DD80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A98F34FB29C7531E00C0DD80 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		A98F34FD29C7537D00C0DD80 /* ContentView_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				A98F34EB29C751B100C0DD80 /* Calculator_iOSApp.swift */,
-				A98F34ED29C751B100C0DD80 /* ContentView.swift */,
+				A98F34FA29C7528D00C0DD80 /* Content */,
 				A98F34EF29C751B200C0DD80 /* Assets.xcassets */,
 				A98F34F129C751B200C0DD80 /* Preview Content */,
 			);
@@ -65,6 +69,24 @@
 				A98F34F229C751B200C0DD80 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A98F34F929C7525600C0DD80 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				A98F34ED29C751B100C0DD80 /* ContentView.swift */,
+				A98F34FB29C7531E00C0DD80 /* Operators.swift */,
+				A98F34FD29C7537D00C0DD80 /* ContentView_ViewModel.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		A98F34FA29C7528D00C0DD80 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A98F34F929C7525600C0DD80 /* ContentView */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				A98F34EE29C751B100C0DD80 /* ContentView.swift in Sources */,
 				A98F34EC29C751B100C0DD80 /* Calculator_iOSApp.swift in Sources */,
+				A98F34FC29C7531E00C0DD80 /* Operators.swift in Sources */,
+				A98F34FE29C7537D00C0DD80 /* ContentView_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
