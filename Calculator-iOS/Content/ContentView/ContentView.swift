@@ -15,28 +15,6 @@ struct ContentView: View {
     var color: Color = .blue
     
     
-    //MARK: Handling of pressing = button
-    func handleEquals(){
-        print("Equals")
-        
-        switch (viewModel.selectedOperator){
-        case .addition:
-            viewModel.result = viewModel.result + viewModel.temporaryNumber
-        case .subtraction:
-            viewModel.result = viewModel.result - viewModel.temporaryNumber
-        case .multiply:
-            viewModel.result = viewModel.result * viewModel.temporaryNumber
-        case .division:
-            guard viewModel.temporaryNumber != 0 else {
-                viewModel.result = 0
-                return
-            }
-            viewModel.result = viewModel.result / viewModel.temporaryNumber
-        }
-        
-        viewModel.expression = ""
-        viewModel.temporaryNumber = 0
-    }
     
     
     //MARK: - Layout
@@ -79,7 +57,7 @@ struct ContentView: View {
                     }
                     
                     OperatorButtonView(icon: "equal", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){
-                        handleEquals()
+                        viewModel.handleEquals()
                     }
                 }
             }

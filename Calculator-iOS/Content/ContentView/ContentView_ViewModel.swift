@@ -42,5 +42,29 @@ extension ContentView {
             self.temporaryNumber = 0
             self.selectedOperator = operation
         }
+        
+        
+        //MARK: Handling of pressing = button
+        func handleEquals(){
+            print("Equals")
+            
+            switch (self.selectedOperator){
+            case .addition:
+                self.result = self.result + self.temporaryNumber
+            case .subtraction:
+                self.result = self.result - self.temporaryNumber
+            case .multiply:
+                self.result = self.result * self.temporaryNumber
+            case .division:
+                guard self.temporaryNumber != 0 else {
+                    self.result = 0
+                    return
+                }
+                self.result = self.result / self.temporaryNumber
+            }
+            
+            self.expression = ""
+            self.temporaryNumber = 0
+        }
     }
 }
