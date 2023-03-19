@@ -22,14 +22,6 @@ struct ContentView: View {
         viewModel.temporaryNumber = Int(viewModel.expression) ?? 0
     }
     
-    //MARK: Handling of clear button press
-    func handleClear(){
-        viewModel.expression = ""
-        viewModel.result = 0
-        viewModel.temporaryNumber = 0
-        viewModel.selectedOperator = .addition
-    }
-    
     //MARK: Handling of operator button press
     func handleOperation(operation: Operators){
         if (viewModel.temporaryNumber != 0) {
@@ -94,7 +86,7 @@ struct ContentView: View {
                     }
                     
                     ClearButtonView(color: color){
-                        handleClear()
+                        viewModel.handleClear()
                     }
                 }
                 
