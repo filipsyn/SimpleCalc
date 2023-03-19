@@ -16,23 +16,15 @@ struct ContentView: View {
     
     //MARK: - Functions
     
-    //MARK: Handling of number presses
-    func handleNumberPress(number: Int){
-        viewModel.expression += String(number)
-        viewModel.temporaryNumber = Int(viewModel.expression) ?? 0
-    }
-    
     //MARK: Handling of operator button press
     func handleOperation(operation: Operators){
         if (viewModel.temporaryNumber != 0) {
             viewModel.result = viewModel.temporaryNumber
         }
         
-        
         viewModel.expression = ""
         viewModel.temporaryNumber = 0
         viewModel.selectedOperator = operation
-        
     }
     
     //MARK: Handling of pressing = button
@@ -108,49 +100,49 @@ struct ContentView: View {
             VStack(spacing: 8) {
                 HStack {
                     NumberButtonView(icon: "7.circle", color: color){
-                        handleNumberPress(number: 7)
+                        viewModel.handleNumberPress(number: 7)
                     }
                     
                     NumberButtonView(icon: "8.circle", color: color){
-                        handleNumberPress(number: 8)
+                        viewModel.handleNumberPress(number: 8)
                     }
                     
                     NumberButtonView(icon: "9.circle", color: color){
-                        handleNumberPress(number: 9)
+                        viewModel.handleNumberPress(number: 9)
                     }
                 }
                 
                 HStack {
                     NumberButtonView(icon: "4.circle", color: color){
-                        handleNumberPress(number: 4)
+                        viewModel.handleNumberPress(number: 4)
                     }
                     
                     NumberButtonView(icon: "5.circle", color: color){
-                        handleNumberPress(number: 5)
+                        viewModel.handleNumberPress(number: 5)
                     }
                     
                     NumberButtonView(icon: "6.circle", color: color){
-                        handleNumberPress(number: 6)
+                        viewModel.handleNumberPress(number: 6)
                     }
                 }
                 
                 HStack {
                     NumberButtonView(icon: "1.circle", color: color){
-                        handleNumberPress(number: 1)
+                        viewModel.handleNumberPress(number: 1)
                     }
                     
                     NumberButtonView(icon: "2.circle", color: color){
-                        handleNumberPress(number: 2)
+                        viewModel.handleNumberPress(number: 2)
                     }
                     
                     NumberButtonView(icon: "3.circle", color: color){
-                        handleNumberPress(number: 3)
+                        viewModel.handleNumberPress(number: 3)
                     }
                 }
                 
                 HStack {
                     NumberButtonView(icon: "0.circle", color: color){
-                        handleNumberPress(number: 0)
+                        viewModel.handleNumberPress(number: 0)
                     }
                 }
                 

@@ -22,5 +22,12 @@ extension ContentView {
             self.temporaryNumber = 0
             self.selectedOperator = .addition
         }
+        
+        
+        //MARK: Handling of number presses
+        func handleNumberPress(number: Int){
+            self.expression += String(number)
+            self.temporaryNumber = Int(self.expression) ?? 0
+        }
     }
 }
