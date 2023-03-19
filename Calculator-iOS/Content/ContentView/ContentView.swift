@@ -9,13 +9,164 @@ import SwiftUI
 
 //MARK: - Content View
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    //MARK: - Properties
+    @StateObject private var viewModel = ViewModel()
+    
+    var color: Color = .blue
+    
+    //MARK: - Functions
+    
+    //MARK: Handling of number presses
+    func handleNumberPress(number: Int){
+        viewModel.expression += String(number)
+        viewModel.temporaryNumber = Int(viewModel.expression) ?? 0
+    }
+    
+    //MARK: Handling of clear button press
+    func handleClear(){
+        viewModel.expression = ""
+        viewModel.result = 0
+        viewModel.temporaryNumber = 0
+        viewModel.selectedOperator = .addition
+    }
+    
+    //MARK: Handling of operator button press
+    func handleOperation(operation: Operators){
+        if (viewModel.temporaryNumber != 0) {
+            viewModel.result = viewModel.temporaryNumber
         }
+        
+        
+        viewModel.expression = ""
+        viewModel.temporaryNumber = 0
+        viewModel.selectedOperator = operation
+        
+    }
+    
+    //MARK: Handling of pressing = button
+    func handleEquals(){
+        print("Equals")
+        
+        switch (viewModel.selectedOperator){
+        case .addition:
+            viewModel.result = viewModel.result + viewModel.temporaryNumber
+        case .subtraction:
+            viewModel.result = viewModel.result - viewModel.temporaryNumber
+        case .multiply:
+            viewModel.result = viewModel.result * viewModel.temporaryNumber
+        case .division:
+            guard viewModel.temporaryNumber != 0 else {
+                viewModel.result = 0
+                return
+            }
+            viewModel.result = viewModel.result / viewModel.temporaryNumber
+        }
+        
+        viewModel.expression = ""
+        viewModel.temporaryNumber = 0
+    }
+    
+    
+    //MARK: - Layout
+    
+    var body: some View {
+        VStack(alignment: .center, spacing: 25) {
+            Image(systemName: "c.circle")
+                .resizable()
+                .foregroundColor(color)
+                .frame(width: 100, height: 100)
+            
+            Text("My first fancy calculator!")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(color)
+            
+            Spacer()
+            
+            VStack(spacing: 8) {
+                HStack(spacing: 10) {
+                    OperatorButtonView(icon: "plus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .addition, color: color){
+                        handleOperation(operation: .addition)
+                    }
+                    
+                    OperatorButtonView(icon: "minus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .subtraction, color: color){
+                        handleOperation(operation: .subtraction)
+                    }
+                    
+                    ClearButtonView(color: color){
+                        handleClear()
+                    }
+                }
+                
+                HStack {
+                    OperatorButtonView(icon: "multiply", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){
+                        handleOperation(operation: .multiply)
+                    }
+                    
+                    OperatorButtonView(icon: "divide", selectedOperator: $viewModel.selectedOperator, buttonOperator: .division, color: color){
+                        handleOperation(operation: .division)
+                    }
+                    
+                    OperatorButtonView(icon: "equal", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){
+                        handleEquals()
+                    }
+                }
+            }
+            
+            VStack(spacing: 8) {
+                HStack {
+                    NumberButtonView(icon: "7.circle", color: color){
+                        handleNumberPress(number: 7)
+                    }
+                    
+                    NumberButtonView(icon: "8.circle", color: color){
+                        handleNumberPress(number: 8)
+                    }
+                    
+                    NumberButtonView(icon: "9.circle", color: color){
+                        handleNumberPress(number: 9)
+                    }
+                }
+                
+                HStack {
+                    NumberButtonView(icon: "4.circle", color: color){
+                        handleNumberPress(number: 4)
+                    }
+                    
+                    NumberButtonView(icon: "5.circle", color: color){
+                        handleNumberPress(number: 5)
+                    }
+                    
+                    NumberButtonView(icon: "6.circle", color: color){
+                        handleNumberPress(number: 6)
+                    }
+                }
+                
+                HStack {
+                    NumberButtonView(icon: "1.circle", color: color){
+                        handleNumberPress(number: 1)
+                    }
+                    
+                    NumberButtonView(icon: "2.circle", color: color){
+                        handleNumberPress(number: 2)
+                    }
+                    
+                    NumberButtonView(icon: "3.circle", color: color){
+                        handleNumberPress(number: 3)
+                    }
+                }
+                
+                HStack {
+                    NumberButtonView(icon: "0.circle", color: color){
+                        handleNumberPress(number: 0)
+                    }
+                }
+                
+            }
+            
+            Text("\(viewModel.result)")
+        }
+        .frame(maxWidth: .infinity)
         .padding()
     }
 }

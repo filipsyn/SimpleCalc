@@ -8,7 +8,12 @@
 import Foundation
 
 extension ContentView {
-    class ViewModel {
-        
+    @MainActor class ViewModel: ObservableObject {
+        @Published var temporaryNumber: Int = 0
+        @Published var expression: String = ""
+        @Published var result: Int = 0
+        @Published var selectedOperator: Operators = .addition
     }
+    
+    
 }
