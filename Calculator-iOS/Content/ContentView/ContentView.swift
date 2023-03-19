@@ -11,15 +11,14 @@ import SwiftUI
 struct ContentView: View {
     //MARK: - Properties
     @StateObject private var viewModel = ViewModel()
-    
     var color: Color = .blue
-    
-    
     
     
     //MARK: - Layout
     var body: some View {
         VStack(alignment: .center, spacing: 25) {
+            
+            //MARK: - Header
             Image(systemName: "c.circle")
                 .resizable()
                 .foregroundColor(color)
@@ -32,6 +31,7 @@ struct ContentView: View {
             
             Spacer()
             
+            //MARK: - Button Grid
             VStack(spacing: 8) {
                 HStack(spacing: 10) {
                     OperatorButtonView(icon: "plus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .addition, color: color){
@@ -110,9 +110,9 @@ struct ContentView: View {
                         viewModel.handleNumberPress(number: 0)
                     }
                 }
-                
             }
             
+            //MARK: - Result
             Text("\(viewModel.result)")
         }
         .frame(maxWidth: .infinity)

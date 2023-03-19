@@ -46,8 +46,6 @@ extension ContentView {
         
         //MARK: Handling of pressing = button
         func handleEquals(){
-            print("Equals")
-            
             switch (self.selectedOperator){
             case .addition:
                 self.result = self.result + self.temporaryNumber
