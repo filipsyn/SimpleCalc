@@ -13,6 +13,11 @@
 		A98F34F329C751B200C0DD80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98F34F229C751B200C0DD80 /* Preview Assets.xcassets */; };
 		A98F34FC29C7531E00C0DD80 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F34FB29C7531E00C0DD80 /* Operators.swift */; };
 		A98F34FE29C7537D00C0DD80 /* ContentView_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F34FD29C7537D00C0DD80 /* ContentView_ViewModel.swift */; };
+		A98F350129C7567900C0DD80 /* OperatorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350029C7567900C0DD80 /* OperatorButtonView.swift */; };
+		A98F350329C756B800C0DD80 /* ClearButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350229C756B800C0DD80 /* ClearButtonView.swift */; };
+		A98F350529C756E600C0DD80 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350429C756E600C0DD80 /* NumberButtonView.swift */; };
+		A98F350729C7571D00C0DD80 /* CalculatorButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350629C7571D00C0DD80 /* CalculatorButtonLayout.swift */; };
+		A98F350929C7573E00C0DD80 /* OperandTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350829C7573E00C0DD80 /* OperandTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		A98F34F229C751B200C0DD80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A98F34FB29C7531E00C0DD80 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		A98F34FD29C7537D00C0DD80 /* ContentView_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_ViewModel.swift; sourceTree = "<group>"; };
+		A98F350029C7567900C0DD80 /* OperatorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorButtonView.swift; sourceTree = "<group>"; };
+		A98F350229C756B800C0DD80 /* ClearButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButtonView.swift; sourceTree = "<group>"; };
+		A98F350429C756E600C0DD80 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
+		A98F350629C7571D00C0DD80 /* CalculatorButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonLayout.swift; sourceTree = "<group>"; };
+		A98F350829C7573E00C0DD80 /* OperandTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperandTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 		A98F34F929C7525600C0DD80 /* ContentView */ = {
 			isa = PBXGroup;
 			children = (
+				A98F34FF29C7561900C0DD80 /* Components */,
 				A98F34ED29C751B100C0DD80 /* ContentView.swift */,
 				A98F34FB29C7531E00C0DD80 /* Operators.swift */,
 				A98F34FD29C7537D00C0DD80 /* ContentView_ViewModel.swift */,
@@ -87,6 +98,18 @@
 				A98F34F929C7525600C0DD80 /* ContentView */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		A98F34FF29C7561900C0DD80 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A98F350029C7567900C0DD80 /* OperatorButtonView.swift */,
+				A98F350229C756B800C0DD80 /* ClearButtonView.swift */,
+				A98F350429C756E600C0DD80 /* NumberButtonView.swift */,
+				A98F350629C7571D00C0DD80 /* CalculatorButtonLayout.swift */,
+				A98F350829C7573E00C0DD80 /* OperandTextFieldView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98F34EE29C751B100C0DD80 /* ContentView.swift in Sources */,
+				A98F350529C756E600C0DD80 /* NumberButtonView.swift in Sources */,
 				A98F34EC29C751B100C0DD80 /* Calculator_iOSApp.swift in Sources */,
+				A98F350729C7571D00C0DD80 /* CalculatorButtonLayout.swift in Sources */,
+				A98F350329C756B800C0DD80 /* ClearButtonView.swift in Sources */,
+				A98F350129C7567900C0DD80 /* OperatorButtonView.swift in Sources */,
+				A98F350929C7573E00C0DD80 /* OperandTextFieldView.swift in Sources */,
 				A98F34FC29C7531E00C0DD80 /* Operators.swift in Sources */,
 				A98F34FE29C7537D00C0DD80 /* ContentView_ViewModel.swift in Sources */,
 			);
