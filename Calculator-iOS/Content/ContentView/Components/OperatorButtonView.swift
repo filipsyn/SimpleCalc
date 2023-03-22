@@ -10,8 +10,6 @@ import SwiftUI
 extension ContentView {
     struct OperatorButtonView: View {
         var icon: String
-        @Binding var selectedOperator: Operators
-        var buttonOperator: Operators
         var color: Color
         var onClick: () -> Void
 

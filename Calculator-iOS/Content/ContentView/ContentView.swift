@@ -26,19 +26,24 @@ struct ContentView: View {
             
             Text("My first fancy calculator!")
                 .font(.title)
-                .fontWeight(.bold)
                 .foregroundColor(color)
             
             Spacer()
             
+            //MARK: - Result
+            Text("\(viewModel.result)")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(color)
+            
             //MARK: - Button Grid
             VStack(spacing: 8) {
                 HStack(spacing: 10) {
-                    OperatorButtonView(icon: "plus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .addition, color: color){
+                    OperatorButtonView(icon: "plus", color: color){
                         viewModel.handleOperation(operation: .addition)
                     }
                     
-                    OperatorButtonView(icon: "minus", selectedOperator: $viewModel.selectedOperator, buttonOperator: .subtraction, color: color){
+                    OperatorButtonView(icon: "minus", color: color){
                         viewModel.handleOperation(operation: .subtraction)
                     }
                     
@@ -48,15 +53,15 @@ struct ContentView: View {
                 }
                 
                 HStack {
-                    OperatorButtonView(icon: "multiply", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){
+                    OperatorButtonView(icon: "multiply", color: color){
                         viewModel.handleOperation(operation: .multiply)
                     }
                     
-                    OperatorButtonView(icon: "divide", selectedOperator: $viewModel.selectedOperator, buttonOperator: .division, color: color){
+                    OperatorButtonView(icon: "divide", color: color){
                         viewModel.handleOperation(operation: .division)
                     }
                     
-                    OperatorButtonView(icon: "equal", selectedOperator: $viewModel.selectedOperator, buttonOperator: .multiply, color: color){
+                    EqualsButtonView(color: color){
                         viewModel.handleEquals()
                     }
                 }
@@ -111,9 +116,6 @@ struct ContentView: View {
                     }
                 }
             }
-            
-            //MARK: - Result
-            Text("\(viewModel.result)")
         }
         .frame(maxWidth: .infinity)
         .padding()

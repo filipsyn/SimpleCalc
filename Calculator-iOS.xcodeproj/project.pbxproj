@@ -18,6 +18,7 @@
 		A98F350529C756E600C0DD80 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350429C756E600C0DD80 /* NumberButtonView.swift */; };
 		A98F350729C7571D00C0DD80 /* CalculatorButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350629C7571D00C0DD80 /* CalculatorButtonLayout.swift */; };
 		A98F350929C7573E00C0DD80 /* OperandTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350829C7573E00C0DD80 /* OperandTextFieldView.swift */; };
+		A98F350B29C88EF700C0DD80 /* EqualsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F350A29C88EF700C0DD80 /* EqualsButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A98F350429C756E600C0DD80 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		A98F350629C7571D00C0DD80 /* CalculatorButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonLayout.swift; sourceTree = "<group>"; };
 		A98F350829C7573E00C0DD80 /* OperandTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperandTextFieldView.swift; sourceTree = "<group>"; };
+		A98F350A29C88EF700C0DD80 /* EqualsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualsButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				A98F350029C7567900C0DD80 /* OperatorButtonView.swift */,
+				A98F350A29C88EF700C0DD80 /* EqualsButtonView.swift */,
 				A98F350229C756B800C0DD80 /* ClearButtonView.swift */,
 				A98F350429C756E600C0DD80 /* NumberButtonView.swift */,
 				A98F350629C7571D00C0DD80 /* CalculatorButtonLayout.swift */,
@@ -187,6 +190,7 @@
 				A98F34EC29C751B100C0DD80 /* Calculator_iOSApp.swift in Sources */,
 				A98F350729C7571D00C0DD80 /* CalculatorButtonLayout.swift in Sources */,
 				A98F350329C756B800C0DD80 /* ClearButtonView.swift in Sources */,
+				A98F350B29C88EF700C0DD80 /* EqualsButtonView.swift in Sources */,
 				A98F350129C7567900C0DD80 /* OperatorButtonView.swift in Sources */,
 				A98F350929C7573E00C0DD80 /* OperandTextFieldView.swift in Sources */,
 				A98F34FC29C7531E00C0DD80 /* Operators.swift in Sources */,
