@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     //MARK: - Properties
     @StateObject private var viewModel = ViewModel()
-    var color: Color = .blue
+    var color: Color = Color("PrimaryGreen")
     
     
     //MARK: - Layout

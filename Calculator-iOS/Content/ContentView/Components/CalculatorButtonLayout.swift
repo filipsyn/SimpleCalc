@@ -16,7 +16,7 @@ extension ContentView {
         var body: some View {
             Image(systemName: icon)
                 .frame(height: 20.0)
-                .foregroundColor(.white)
+                .foregroundColor(Color("ButtonTextColor"))
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(color)
