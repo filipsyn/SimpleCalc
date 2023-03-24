@@ -69,49 +69,49 @@ struct ContentView: View {
             
             VStack(spacing: 8) {
                 HStack {
-                    NumberButtonView(icon: "7.circle", color: color){
+                    NumberButtonView(icon: "7.square", color: color){
                         viewModel.handleNumberPress(number: 7)
                     }
                     
-                    NumberButtonView(icon: "8.circle", color: color){
+                    NumberButtonView(icon: "8.square", color: color){
                         viewModel.handleNumberPress(number: 8)
                     }
                     
-                    NumberButtonView(icon: "9.circle", color: color){
+                    NumberButtonView(icon: "9.square", color: color){
                         viewModel.handleNumberPress(number: 9)
                     }
                 }
                 
                 HStack {
-                    NumberButtonView(icon: "4.circle", color: color){
+                    NumberButtonView(icon: "4.square", color: color){
                         viewModel.handleNumberPress(number: 4)
                     }
                     
-                    NumberButtonView(icon: "5.circle", color: color){
+                    NumberButtonView(icon: "5.square", color: color){
                         viewModel.handleNumberPress(number: 5)
                     }
                     
-                    NumberButtonView(icon: "6.circle", color: color){
+                    NumberButtonView(icon: "6.square", color: color){
                         viewModel.handleNumberPress(number: 6)
                     }
                 }
                 
                 HStack {
-                    NumberButtonView(icon: "1.circle", color: color){
+                    NumberButtonView(icon: "1.square", color: color){
                         viewModel.handleNumberPress(number: 1)
                     }
                     
-                    NumberButtonView(icon: "2.circle", color: color){
+                    NumberButtonView(icon: "2.square", color: color){
                         viewModel.handleNumberPress(number: 2)
                     }
                     
-                    NumberButtonView(icon: "3.circle", color: color){
+                    NumberButtonView(icon: "3.square", color: color){
                         viewModel.handleNumberPress(number: 3)
                     }
                 }
                 
                 HStack {
-                    NumberButtonView(icon: "0.circle", color: color){
+                    NumberButtonView(icon: "0.square", color: color){
                         viewModel.handleNumberPress(number: 0)
                     }
                 }
