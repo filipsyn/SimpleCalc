@@ -19,7 +19,7 @@ struct ContentView: View {
         VStack(alignment: .center, spacing: 25) {
             
             //MARK: - Header
-            Image(systemName: "c.circle")
+            Image(systemName: "plus.forwardslash.minus")
                 .resizable()
                 .foregroundColor(color)
                 .frame(width: 100, height: 100)
